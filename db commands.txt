@@ -1,0 +1,5 @@
+
+mongodump -h localhost:27017 -d jobPortal -o C:\Users\kvedurumudi\MongoBackup
+
+
+mongorestore -h ds117889.mlab.com:17889 -d CloudFoundry_jc5t6s0b_i2ob8qqs -u JobPortal -p Oct@2017 C:\Users\kvedurumudi\MongoBackup\jobPortal

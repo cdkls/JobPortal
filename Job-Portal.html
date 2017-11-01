@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Job Application Portal</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Job Application">
+  <meta name="keywords" content="job, application">
+  <meta name="author" content="Jeenor, Chary, Satish, Kalyan">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="beautify.css">
+  <script src="js\Form_validation.js"></script>
+  <script src="js\operations.js"></script>
+</head>
+
+<body>
+  <h1 class="mainHead">Job Application Portal</h1>
+
+  <label class="logout">
+    <a href="/login"> &#10062; Logout</a>
+  </label>
+  <main class="mainSection">
+    <input id="tab1" type="radio" onclick='hideSearchNow()' name="tabs" checked>
+    <label for="tab1">Apply Now</label>
+
+    <input id="tab2" type="radio" onclick='hideApplyNow()' name="tabs">
+    <label for="tab2">Search Resume</label>
+
+    <section id="content1">
+      <div id="bd1">
+        <form name="application" action="/submitResume" method="post">
+          <div id="section1">
+            <section class="innerSection">
+              <div id="contact_section">
+                <label for="first_name">First name</label>
+                <br>
+                <input type="text" name="fname" id="first_name" required>
+                <br>
+                <span id="error"></span>
+                <label for="last_name">Last name</label>
+                <br>
+                <input type="text" name="lname" id="last_name" required>
+                <br>
+                <span id="error1"></span>
+                <label for="email_id">Email</label>
+                <br>
+                <input type="text" name="email" id="email_id" required>
+                <br>
+                <span id="error2"></span>
+                <label>Phone</label>
+                <br>
+                <input type="text" name="phone" id="phone" required>
+                <br>
+                <span id="error3"></span>
+
+              </div>
+              <div id="position_section">
+                <label for="position">Position you are applying for</label>
+                <br>
+                <input type="text" name="position" id="position" required>
+                <br>
+                <span id="error4"></span>
+                <label>Upload Resume</label>
+                <br/>
+                <input type="file" name="file" id="file" />
+                <br/>
+                <input type="button" value="Upload File" class="submitButton" onclick="uploadFile()">
+                <br/>
+                <span id="status"></span>
+              </div>
+            </section>
+          </div>
+          <div id="section2">
+            <section class="innerSection">
+              <label>Portfolio website</label>
+              <br>
+              <input type="text" id="website" name="website" required>
+              <br>
+              <span id="error5"></span>
+              <label for="salary_req">Salary requirements</label>
+              <br>
+              <input type="text" name="expectedSal" id="salary_req" required>
+              <br>
+              <span id="error6"></span>
+              <label>When can you start ?</label>
+              <br>
+              <input type="text" name="startDate" id="start_date" required>
+              <br>
+              <span id="error7"></span>
+              <label>Are you willing to relocate ?</label>
+              <br>
+              <div>
+                <label class="submitButton">
+                  <input type="radio" id="yes" class="customRadio" checked="checked" name="relocate" value="yes"> Yes
+                </label>
+                <label class="submitButton">
+                  <input type="radio" id="no" class="customRadio" name="relocate" value="no"> No
+                </label>
+                <label class="submitButton">
+                  <input type="radio" id="ns" class="customRadio" name="relocate" value="notsure"> Not Sure</label>
+              </div>
+              <br>
+              <label for="company">Last company you worked for</label>
+              <br>
+              <input type="text" name="lCompany" id="last_company" required>
+              <br>
+              <span id="error8"></span>
+              <label for="comments">Comments</label>
+              <br>
+              <textarea id="comments" name="comment" rows="4" cols="50" required></textarea>
+              <br>
+              <span id="error9"></span>
+              <input type="button" onclick="formValidation()" class="submitButton" value="Submit">
+        </form>
+        </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="content2">
+      <div id="bd1">
+        <div id="search_content">
+
+          <input id="searchbox" type="text">
+          <input type="button" class="submitButton" value="Submit">
+        </div>
+        <div id="table_content">
+          <table id="resumes">
+            <tbody id="resumesBody">
+              <tr>
+                <th>Position</th>
+                <th>Phone</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Website</th>
+                <th>Last Company</th>
+              </tr>
+            </tbody>
+          </table>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Job Application Portal</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Job Application">
+  <meta name="keywords" content="job, application, login">
+  <meta name="author" content="Jeenor, Chary, Satish, Kalyan">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <h1 class="mainHead">Login</h1>
+
+
+  <main class="loginSection">
+    <form action="/validateUser" method="post">
+      <table class="loginTable">
+        <tr>
+          <td colspan="2" align="center">
+            <img src="image016.jpg" alt="Logo" height="100" width="100">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="username">User Name</label>
+          </td>
+          <td>
+            <input id="username" placeholder="Enter User Name" name="user" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password">Pass Word</label>
+          </td>
+          <td>
+            <input id="password" placeholder="Enter Password" name="pwd" type="password">
+          </td>
+
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" value="Login" onclick="validate()">
+          </td>
+          <td>
+            <a href="#">Lost password?</a>
+          </td>
+        </tr>
+
+      </table>
+    </form>
+  </main>
+</body>
+
+</html>

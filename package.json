@@ -1,0 +1,18 @@
+{
+  "name": "job-portal",
+  "version": "0.0.1",
+  "description": "Job Portal application",
+  "main" : "server.js",
+  "dependencies" : {
+    "body-parser": "1.14.1",
+    "express": "4.13.3",
+    "cors": "",
+    "mongodb": "",
+    "bson-ext": "",
+    "multer": "1.2.0"
+  },
+    "engines": {
+    "node": "7.10.1",
+    "npm": "4.1.2"
+  }
+}
